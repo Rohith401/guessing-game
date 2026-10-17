@@ -9,8 +9,9 @@ while guess!=secret:
         print("Too low")
     elif guess>secret:
         print("Too high")
-    if tries==5:
+    if guess==secret:
+        print("Correct! you took",tries,"tries")    
+    elif tries==5:      
         print("You lose")
         break
-    if guess==secret:
-        print("Correct! you took",tries,"tries")         
+          
