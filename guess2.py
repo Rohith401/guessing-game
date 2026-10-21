@@ -1,9 +1,14 @@
 import random
-secret=random.randint(1,10)
+level=input("easy or hard?")
+if level=="easy":
+    maximum=50
+else:
+    maximum=200
+secret=random.randint(1,maximum)
 guess=0
 tries=0
 while guess!=secret:
-    guess=int(input("guess a number from 1 to 10:"))
+    guess=int(input("guess a number from 1 to "+str(maximum)+":"))
     tries=tries+1
     if guess<secret:
         print("Too low")
